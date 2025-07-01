@@ -6,4 +6,5 @@ langchain-anthropic
 PyPDF2
 faiss-cpu
 streamlit
+sentence-transformers
 -e .
