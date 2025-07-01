@@ -45,7 +45,6 @@ DocMind/
 ├── template.py                # Project scaffolding script
 ├── requirements.txt           # Python dependencies
 ├── setup.py                   # Packaging config
-├── test.py                    # (Empty) Placeholder for tests
 ├── LICENSE
 └── README.md
 ```
