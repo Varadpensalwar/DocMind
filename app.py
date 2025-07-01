@@ -4,10 +4,13 @@ from src.helper import get_pdf_text, get_text_chunks, get_vector_store, get_conv
 
 
 def user_input(user_question):
+    if st.session_state.conversation is None:
+        st.warning("Please upload and process PDF files before asking questions.")
+        return
     response = st.session_state.conversation({'question': user_question})
     st.session_state.chatHistory = response['chat_history']
     for i, message in enumerate(st.session_state.chatHistory):
-        if i%2 == 0:
+        if i % 2 == 0:
             st.write("User: ", message.content)
         else:
             st.write("Reply: ", message.content)
