@@ -17,22 +17,32 @@ DocMind is an AI-powered PDF information retrieval system that helps you quickly
 ## ⚠️ Important Notes
 
 - This app uses the latest LangChain integrations. Some imports (like `HuggingFaceEmbeddings`) are deprecated and will need updating for LangChain 1.0+. See the [LangChain migration guide](https://python.langchain.com/docs/versions/migrating_memory/) for details.
-- You must set your `ANTHROPIC_API_KEY` as a secret in Streamlit Cloud or in a local `.env` file:
+- All required dependencies are listed in `requirements.txt`.
+- The codebase is ready for LangChain 0.3.x, but some APIs will need updating for 1.0+.
+- The app now handles missing API keys and prevents errors if you try to ask questions before uploading PDFs.
+
+---
+
+## 🛠️ Environment Variables
+
+To run this project, you will need to set up the following environment variable:
+
+| Variable Name         | Description                                 | Example Value                |
+|----------------------|---------------------------------------------|------------------------------|
+| `ANTHROPIC_API_KEY`  | Your Anthropic API key for Claude models    | `sk-ant-...`                 |
+
+**How to set up:**
+
+- **Locally:** Create a `.env` file in your project root:
   ```env
   ANTHROPIC_API_KEY=your_actual_api_key_here
   ```
-- The app now handles missing API keys and prevents errors if you try to ask questions before uploading PDFs.
-- All required dependencies are listed in `requirements.txt`, including:
-  - `langchain`
-  - `langchain-community`
-  - `langchain-anthropic`
-  - `sentence-transformers`
-  - `faiss-cpu`
-  - `PyPDF2`
-  - `streamlit`
-  - `python-dotenv`
-  - `anthropic`
-- The codebase is ready for LangChain 0.3.x, but some APIs will need updating for 1.0+.
+- **Streamlit Cloud:** Go to your app dashboard → **Settings** → **Secrets** and add:
+  ```env
+  ANTHROPIC_API_KEY=your_actual_api_key_here
+  ```
+
+> **Never commit your API keys to version control. Always use environment variables or Streamlit secrets for sensitive information.**
 
 ---
 
@@ -106,14 +116,6 @@ DocMind/
      ```env
      ANTHROPIC_API_KEY=your_anthropic_api_key_here
      ```
-
----
-
-## ⚙️ Environment Variables
-
-| Variable            | Description                        | Example Value           |
-|---------------------|------------------------------------|------------------------|
-| `ANTHROPIC_API_KEY` | Your Anthropic Claude API key      | `sk-ant-...`           |
 
 ---
 
