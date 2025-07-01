@@ -1,6 +1,7 @@
 python-dotenv
 anthropic
 langchain
+langchain-community
 PyPDF2
 faiss-cpu
 streamlit
