@@ -44,7 +44,7 @@ def get_conversational_chain(vector_store):
     You are a helpful assistant that answers questions based on the provided context. 
     Always respond in English, regardless of the language of the question.
     
-    Use the following context to answer the question concisely in maximum 2-3 paragraphs. 
+    Use the following context to answer the question concisely in maximum 2-3 concise paragraphs. 
     Keep your response brief and to the point.
     If the answer is not available in the provided context, say "The answer is not available in the context provided."
     Do not make up information that is not in the context.
