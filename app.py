@@ -36,6 +36,9 @@ def main():
             with st.spinner("Processing..."):
                 raw_text = get_pdf_text(pdf_docs)
                 text_chunks = get_text_chunks(raw_text)
+                if not text_chunks:
+                    st.error("No text could be extracted from the uploaded PDF(s). Please check your files and try again.")
+                    return
                 vector_store = get_vector_store(text_chunks)
                 st.session_state.conversation = get_conversational_chain(vector_store)
                 st.success("Done, Now Ask questions about your PDF files")
