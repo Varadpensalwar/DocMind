@@ -16,7 +16,7 @@ DocMind is an AI-Powered PDF information retrieval system that helps you quickly
 
 ## ⚠️ Important Notes
 
-- This app uses the latest LangChain integrations. Some imports (like `HuggingFaceEmbeddings`) are deprecated and will need updating for LangChain 1.0+. See the [LangChain migration guide] (https://python.langchain.com/docs/versions/migrating_memory/) for details.
+- This app uses the latest LangChain integrations. Some imports (like `HuggingFaceEmbeddings`) are deprecated and will need updating for LangChain 1.0+. See the [LangChain migration guide](https://python.langchain.com/docs/versions/migrating_memory/) for details.
 - All required dependencies are listed in `requirements.txt`.
 - The codebase is ready for LangChain 0.3.x, but some APIs will need updating for 1.0+.
 - The app now handles missing API keys and prevents errors if you try to ask questions before uploading PDFs.
