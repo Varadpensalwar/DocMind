@@ -1,4 +1,4 @@
-# 📄 DocMind.
+# 📄 DocMind
 
 DocMind is an AI-Powered PDF information retrieval system that helps you quickly and efficiently extract insights from your documents using state-of-the-art language models and vector search. Whether you're a researcher, student, or professional, DocMind makes it easy to ask questions and get concise answers from your PDF files.
 
